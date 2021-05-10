@@ -6,13 +6,15 @@
 }
 
 /* logo */
-.logo{
+.logo {
     text-align: center;
     font-size: 5vw;
 }
 
 /* game */
 .gamesquare {
+    display: flex;
+    justify-content: center;
     margin: 15px 10%;
     background-color: lightgrey;
     border: 1px solid black;
@@ -21,10 +23,10 @@
     height: 70vh;
 }
 
- /* win message */
+/* win message */
 .win {
     display: none;
-    
+
 }
 
 .win h3 {
@@ -43,14 +45,14 @@
 }
 
 .win button:hover {
-    border:2px solid white;
+    border: 2px solid white;
     background: gray;
     color: white;
 }
 
 /* Lose message */
 .lose {
-    display: block;
+    display: none;
 }
 
 .lose h3 {
@@ -69,15 +71,76 @@
 }
 
 .lose button:hover {
-    border:2px solid white;
+    border: 2px solid white;
     background: gray;
     color: white;
 }
 
+/* how to play message*/
 .how {
     display: none;
 }
 
+.how h3 {
+    font-size: 200%;
+    text-align: center;
+}
+
+.how p {
+    text-align: center;
+    font-size: 200%;
+}
+
+.how ul {
+    text-align: center;
+    list-style: none;
+    margin: 50px;
+}
+
+.how li {
+    font-size: 200%;
+}
+
+.how i {
+    font-size: 150%;
+}
+
+.how button {
+    margin: 0 25%;
+    font-size: 25px;
+    width: 50%;
+    padding: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.how button:hover {
+    border: 2px solid white;
+    background: gray;
+    color: white;
+}
+
+/* game */
 .game {
     display: none;
+    align-items: center;
+    margin: auto;
 }
+
+.game-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+    border-radius: 50%;
+    font-size: 75px;
+    width: 13vw;
+    height: 13vw;
+}
+
+.game-btn:hover {
+    background: black;
+    color: white;
+    border:5px solid white;
+}
+
