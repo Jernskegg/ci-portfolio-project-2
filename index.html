@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,29 +8,30 @@
     <title>Rock Paper Scissors Lizard Spock</title>
     <link rel="stylesheet" href="static/css/style.css">
 </head>
+
 <body>
     <!-- logo section-->
     <header>
         <h2 class="logo">
-            Rock Paper Scissors Lizard Spock 
+            Rock Paper Scissors Lizard Spock
         </h2>
     </header>
     <!-- win message section -->
     <section class="gamesquare">
-        <div class="win">
-            <h3>You win!</h3>
-            <button id="win">Play again?</button>
+        <div>
+            <div class="win">
+                <h3>You win!</h3>
+                <button id="win">Play again?</button>
+            </div>
         </div>
-    </section>
-    <!-- lose message section -->
-    <section class="gamesquare">
-        <div class="lose">
-            <h3>You lose!</h3>
-            <button id="retry">try again?</button>
+        <!-- lose message section -->
+        <div>
+            <div class="lose">
+                <h3>You lose!</h3>
+                <button id="retry">try again?</button>
+            </div>
         </div>
-    </section>
-    <!-- how to play section -->
-    <section class="gamesquare">
+        <!-- how to play section -->
         <div>
             <h3>How to play</h3>
             <p>The first one that reaches 3 round wins the game</p>
@@ -43,16 +45,16 @@
             </ul>
             <button>I understand now!</button>
         </div>
-    </section>
-    <!-- game area section -->
-    <section class="gamesquare">
-        <ul>
-            <li id="rock"><i class="far fa-hand-rock"></i></li>
-            <li id="paper"><i class="far fa-hand-paper"></i></li>
-            <li id="scissors"><i class="far fa-hand-scissors"></i></li>
-            <li id="lizard"><i class="far fa-hand-lizard"></i></li>
-            <li id="spock"><i class="far fa-hand-spock"></i></li>
-        </ul>
+        <!-- game area section -->
+        <div>
+            <ul>
+                <li id="rock"><i class="far fa-hand-rock"></i></li>
+                <li id="paper"><i class="far fa-hand-paper"></i></li>
+                <li id="scissors"><i class="far fa-hand-scissors"></i></li>
+                <li id="lizard"><i class="far fa-hand-lizard"></i></li>
+                <li id="spock"><i class="far fa-hand-spock"></i></li>
+            </ul>
+        </div>
     </section>
     <!-- footer area section -->
     <footer>
@@ -63,4 +65,5 @@
     <script src="https://kit.fontawesome.com/be9f637dd0.js" crossorigin="anonymous"></script>
 
 </body>
+
 </html>
