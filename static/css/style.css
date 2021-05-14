@@ -120,9 +120,24 @@
     color: white;
 }
 
+.htp button {
+    margin: 0 25%;
+    font-size: 25px;
+    width: 50%;
+    padding: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.htp button:hover {
+    border: 2px solid white;
+    background: gray;
+    color: white;
+}
+
 /* game */
 .game {
-    display: none;
+    display: block;
     align-items: center;
     margin: auto;
 }
@@ -140,7 +155,7 @@
 
 .game-btn:hover {
     background: black;
-    color: white;
+    color: white; 
     border:5px solid white;
 }
 

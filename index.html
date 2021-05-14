@@ -19,20 +19,20 @@
     <!-- game section -->
     <section class="gamesquare">
         <!-- win message section -->
-        <div class="win">
+        <div id="win" class="win">
             <h3>You win!</h3>
-            <button id="win">Play again?</button>
+            <button class="win">Play again?</button>
         </div>
 
         <!-- lose message section -->
         <div>
-            <div class="lose">
+            <div id="lose" class="lose">
                 <h3>You lose!</h3>
                 <button id="retry">try again?</button>
             </div>
         </div>
         <!-- how to play section -->
-        <div class="how">
+        <div id="how" class="how">
             <h3>How to play</h3>
             <p>The first one that reaches 3 round wins the game</p>
             <p>You press the move you want to make.</p>
@@ -43,10 +43,10 @@
                 <li><i class="far fa-hand-lizard"></i> Lizard beats paper and Spock.</li>
                 <li><i class="far fa-hand-spock"></i> Spock beats Rock and scissors</li>
             </ul>
-            <button>I understand now!</button>
+            <button id="understand">I understand now!</button>
         </div>
         <!-- game area section -->
-        <div class="game">
+        <div id="game" class="game">
             <div class="game-btn" id="rock">
                 <i class="far fa-hand-rock"></i>
             </div>
@@ -65,12 +65,15 @@
         </div>
     </section>
     <!-- footer area section -->
-    <footer>
-        <h3>How to play?</h3>
+    <footer id="htp" class="htp">
+        <button>
+            <p>How to play?</p>
+        </button>
     </footer>
 
     <!-- Awesome-Font script -->
     <script src="https://kit.fontawesome.com/be9f637dd0.js" crossorigin="anonymous"></script>
+    <script src="./static/js/script.js"></script>
 
 </body>
 
