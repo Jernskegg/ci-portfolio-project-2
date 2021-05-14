@@ -95,9 +95,9 @@ function rock() {
 
 function paper() {
     let nonPlayerChoice = numgen();
-    let playerChoice = "Rock";
+    let playerChoice = "paper";
     let result = "";
-    if (nonPlayerChoice == "Lizard" || nonPlayerChoice == "Scissors") {
+    if (nonPlayerChoice == "Rock" || nonPlayerChoice == "Spock") {
         result = msg(playerChoice, nonPlayerChoice, win = 1);
     } else if (nonPlayerChoice == playerChoice) {
         result = msg(playerChoice, nonPlayerChoice, win = 2);
