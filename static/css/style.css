@@ -137,7 +137,7 @@
 
 /* game */
 .game {
-    display: block;
+    display: none;
     align-items: center;
     margin: auto;
 }
@@ -159,3 +159,13 @@
     border:5px solid white;
 }
 
+/* Javascript error */
+
+.support {
+    display: block;
+}
+
+.support h3 {
+    text-align: center;
+    margin: 50% 0;
+}

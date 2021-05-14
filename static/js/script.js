@@ -1,4 +1,8 @@
+//hide javascript error if javascript is running
+document.getElementById("support").style.display = "none";
+
 document.addEventListener("DOMContentLoaded", function () {
+    
     let howtp = document.getElementById("htp");
 
 
