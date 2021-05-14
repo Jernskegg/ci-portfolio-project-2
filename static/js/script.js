@@ -108,7 +108,17 @@ function paper() {
 }
 
 function scissors() {
-
+    let nonPlayerChoice = numgen();
+    let playerChoice = "Scissors";
+    let result = "";
+    if (nonPlayerChoice == "Lizard" || nonPlayerChoice == "Paper") {
+        result = msg(playerChoice, nonPlayerChoice, win = 1);
+    } else if (nonPlayerChoice == playerChoice) {
+        result = msg(playerChoice, nonPlayerChoice, win = 2);
+    } else {
+        result = msg(playerChoice, nonPlayerChoice, win = 0);
+    }
+    return;
 }
 
 function lizard() {
