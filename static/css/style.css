@@ -158,6 +158,12 @@
     color: white; 
     border:5px solid white;
 }
+.game-text {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 2.5vw;
+    
+}
 
 /* Javascript error */
 

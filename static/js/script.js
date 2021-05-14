@@ -56,26 +56,26 @@ function game() {
     let result = "";
     btnRock.addEventListener("click", function () {
         result = rock();
-        console.log(result)
-
+        return result;
     })
 
     btnPaper.addEventListener("click", function () {
-        paper();
+        result = paper();
     })
 
     btnScissors.addEventListener("click", function () {
-        scissors();
+        result = scissors();
     })
 
     btnLizard.addEventListener("click", function () {
-        lizard();
+        result = lizard();
     })
 
     btnSpock.addEventListener("click", function () {
-        spock();
+        result = spock();
     })
 
+    console.log(result)
 
 }
 
@@ -85,11 +85,8 @@ function rock() {
     let result = "";
     if (nonPlayerChoice == "Lizard" || nonPlayerChoice == "Scissors") {
         result = msg(playerChoice, nonPlayerChoice, win = 1);
-        
-
     } else if (nonPlayerChoice == playerChoice) {
         result = msg(playerChoice, nonPlayerChoice, win = 2);
-
     } else {
         result = msg(playerChoice, nonPlayerChoice, win = 0);
     }
@@ -97,7 +94,17 @@ function rock() {
 }
 
 function paper() {
-
+    let nonPlayerChoice = numgen();
+    let playerChoice = "Rock";
+    let result = "";
+    if (nonPlayerChoice == "Lizard" || nonPlayerChoice == "Scissors") {
+        result = msg(playerChoice, nonPlayerChoice, win = 1);
+    } else if (nonPlayerChoice == playerChoice) {
+        result = msg(playerChoice, nonPlayerChoice, win = 2);
+    } else {
+        result = msg(playerChoice, nonPlayerChoice, win = 0);
+    }
+    return;
 }
 
 function scissors() {
@@ -112,16 +119,31 @@ function spock() {
 
 }
 
-function msg(playerChoice,nonPlayerChoice,win) {
-    let result = "";
+function msg(playerChoice, nonPlayerChoice, win) {
+    let resultOne = "";
+    let resultTwo = "";
+    let resultThree = "";
     if (win == 1) {
-        result = `You chose ${playerChoice}, Conputer chose ${nonPlayerChoice}. ${playerChoice} beats ${nonPlayerChoice}. Round Won.`;
+        resultOne = `You chose ${playerChoice}, Computer chose ${nonPlayerChoice}.`;
+        resultTwo = `${playerChoice} beats ${nonPlayerChoice}.`;
+        resultThree = `Round Won.`;
     } else if (win == 2) {
-        result = `You chose ${playerChoice}, Conputer chose ${nonPlayerChoice}. Stalemate.`;
+        resultOne = `You chose ${playerChoice}, Computer chose ${nonPlayerChoice}.`;
+        resultTwo = "";
+        resultThree = `Stalemate.`;
     } else {
-        result = `You chose ${playerChoice}, Conputer chose ${nonPlayerChoice}. ${nonPlayerChoice} beats ${playerChoice}. Round lost.`;
+        resultOne = `You chose ${playerChoice}, Computer chose ${nonPlayerChoice}.`;
+        resultTwo = ` ${nonPlayerChoice} beats ${playerChoice}.`;
+        resultThree = `Round lost.`;
     }
-    return result;
+
+    let resultTextOne = document.getElementById(`textOne`).innerText;
+    document.getElementById("textOne").textContent = resultOne;
+    let resultTextTwo = document.getElementById(`textTwo`).innerText;
+    document.getElementById("textTwo").textContent = resultTwo;
+    let resultTextThree = document.getElementById(`textThree`).innerText;
+    document.getElementById("textThree").textContent = resultThree;
+    return;
 }
 
 /**
