@@ -127,14 +127,17 @@ function msg(playerChoice, nonPlayerChoice, win) {
         resultOne = `You chose ${playerChoice}, Computer chose ${nonPlayerChoice}.`;
         resultTwo = `${playerChoice} beats ${nonPlayerChoice}.`;
         resultThree = `Round Won.`;
+        document.getElementById("textThree").style.color = "green";
     } else if (win == 2) {
         resultOne = `You chose ${playerChoice}, Computer chose ${nonPlayerChoice}.`;
         resultTwo = "";
         resultThree = `Stalemate.`;
+        document.getElementById("textThree").style.color = "blue";
     } else {
         resultOne = `You chose ${playerChoice}, Computer chose ${nonPlayerChoice}.`;
         resultTwo = ` ${nonPlayerChoice} beats ${playerChoice}.`;
         resultThree = `Round lost.`;
+        document.getElementById("textThree").style.color = "red";
     }
 
     let resultTextOne = document.getElementById(`textOne`).innerText;
