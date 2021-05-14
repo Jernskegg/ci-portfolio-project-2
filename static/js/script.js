@@ -1,43 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     let howtp = document.getElementById("htp");
-    let iUnderstand = document.getElementById("understand")
-    let btnRock = document.getElementById("rock");
-    let btnPaper = document.getElementById("paper");
-    let btnScissors = document.getElementById("scissors");
-    let btnLizard = document.getElementById("lizard");
-    let btnSpock = document.getElementById("spock");
+
 
 
     howtp.addEventListener("click", function () {
         howToPlay();
     })
 
-    iUnderstand.addEventListener("click", function () {
-        game();
-    })
-    
-    btnRock.addEventListener("click", function () {
-        rock();
-    })
-
-    btnPaper.addEventListener("click", function () {
-        paper();
-    })
-
-    btnScissors.addEventListener("click", function () {
-        scissors();
-    })
-
-    btnLizard.addEventListener("click", function () {
-        lizard();
-    })
-
-    btnSpock.addEventListener("click", function () {
-        spock();
-    })
 
 
-    
     game();
 })
 /**
@@ -49,8 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
  * 5. spock
  */
 function numgen() {
-let num = Math.floor(Math.random() * 5) + 1;
-return num;
+    let num = Math.floor(Math.random() * 5);
+    let choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
+    let choice = choices[num]
+    return choice;
 }
 
 // win game
@@ -71,34 +44,97 @@ function game() {
     document.getElementById("game").style.display = "block";
     document.getElementById("how").style.display = "none";
 
+    let btnRock = document.getElementById("rock");
+    let btnPaper = document.getElementById("paper");
+    let btnScissors = document.getElementById("scissors");
+    let btnLizard = document.getElementById("lizard");
+    let btnSpock = document.getElementById("spock");
+
+    btnRock.addEventListener("click", function () {
+        rock();
+    })
+
+    btnPaper.addEventListener("click", function () {
+        paper();
+    })
+
+    btnScissors.addEventListener("click", function () {
+        scissors();
+    })
+
+    btnLizard.addEventListener("click", function () {
+        lizard();
+    })
+
+    btnSpock.addEventListener("click", function () {
+        spock();
+    })
+
 }
 
-function rock(){
-   numgen();
-   let num = numgen();
-   if (num == 1 || num == 2) {
-       console.log("win");
-       console.log(num)
-   }  else {
-       console.log("lose");
-       console.log(num)
-   }
+function rock() {
+    numgen();
+    let num = numgen();
+    if (num == "Lizard" || num == "Scissors") {
+        console.log("win");
+        console.log(num);
+    } else {
+        console.log("lose");
+        console.log(num);
+    }
+    return;
 }
 
-function paper(){
-   
+function paper() {
+    numgen();
+    let num = numgen();
+    if (num == "Rock" || num == "Spock") {
+        console.log("win");
+        console.log(num);
+    } else {
+        console.log("lose");
+        console.log(num);
+    }
+    return;
 }
 
-function scissors(){
-    
+function scissors() {
+    numgen();
+    let num = numgen();
+    if (num == "Lizard" || num == "Paper") {
+        console.log("win");
+        console.log(num);
+    } else {
+        console.log("lose");
+        console.log(num);
+    }
+    return;
 }
 
-function lizard(){
-    
+function lizard() {
+    numgen();
+    let num = numgen();
+    if (num == "Paper" || num == "spock") {
+        console.log("win");
+        console.log(num);
+    } else {
+        console.log("lose");
+        console.log(num);
+    }
+    return;
 }
 
-function spock(){
-    
+function spock() {
+    numgen();
+    let num = numgen();
+    if (num == "Rock" || num == "Scissors") {
+        console.log("win");
+        console.log(num);
+    } else {
+        console.log("lose");
+        console.log(num);
+    }
+    return;
 }
 
 /**
@@ -107,4 +143,10 @@ function spock(){
 function howToPlay() {
     document.getElementById("game").style.display = "none";
     document.getElementById("how").style.display = "block";
+
+    let iUnderstand = document.getElementById("understand")
+
+    iUnderstand.addEventListener("click", function () {
+        game();
+    })
 }
