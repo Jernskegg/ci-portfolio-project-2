@@ -147,6 +147,8 @@ function howToPlay() {
     let iUnderstand = document.getElementById("understand")
 
     iUnderstand.addEventListener("click", function () {
-        game();
+        document.getElementById("game").style.display = "block";
+        document.getElementById("how").style.display = "none";
+        return;
     })
 }
