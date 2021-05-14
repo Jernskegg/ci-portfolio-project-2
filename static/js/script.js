@@ -2,7 +2,7 @@
 document.getElementById("support").style.display = "none";
 
 document.addEventListener("DOMContentLoaded", function () {
-    
+
     let howtp = document.getElementById("htp");
 
 
@@ -53,9 +53,11 @@ function game() {
     let btnScissors = document.getElementById("scissors");
     let btnLizard = document.getElementById("lizard");
     let btnSpock = document.getElementById("spock");
-
+    let result = "";
     btnRock.addEventListener("click", function () {
-        rock();
+        result = rock();
+        console.log(result)
+
     })
 
     btnPaper.addEventListener("click", function () {
@@ -74,71 +76,52 @@ function game() {
         spock();
     })
 
+
 }
 
 function rock() {
-    numgen();
-    let num = numgen();
-    if (num == "Lizard" || num == "Scissors") {
-        console.log("win");
-        console.log(num);
+    let nonPlayerChoice = numgen();
+    let playerChoice = "Rock";
+    let result = "";
+    if (nonPlayerChoice == "Lizard" || nonPlayerChoice == "Scissors") {
+        result = msg(playerChoice, nonPlayerChoice, win = 1);
+        
+
+    } else if (nonPlayerChoice == playerChoice) {
+        result = msg(playerChoice, nonPlayerChoice, win = 2);
+
     } else {
-        console.log("lose");
-        console.log(num);
+        result = msg(playerChoice, nonPlayerChoice, win = 0);
     }
-    return;
+    return result;
 }
 
 function paper() {
-    numgen();
-    let num = numgen();
-    if (num == "Rock" || num == "Spock") {
-        console.log("win");
-        console.log(num);
-    } else {
-        console.log("lose");
-        console.log(num);
-    }
-    return;
+
 }
 
 function scissors() {
-    numgen();
-    let num = numgen();
-    if (num == "Lizard" || num == "Paper") {
-        console.log("win");
-        console.log(num);
-    } else {
-        console.log("lose");
-        console.log(num);
-    }
-    return;
+
 }
 
 function lizard() {
-    numgen();
-    let num = numgen();
-    if (num == "Paper" || num == "spock") {
-        console.log("win");
-        console.log(num);
-    } else {
-        console.log("lose");
-        console.log(num);
-    }
-    return;
+
 }
 
 function spock() {
-    numgen();
-    let num = numgen();
-    if (num == "Rock" || num == "Scissors") {
-        console.log("win");
-        console.log(num);
+
+}
+
+function msg(playerChoice,nonPlayerChoice,win) {
+    let result = "";
+    if (win == 1) {
+        result = `You chose ${playerChoice}, Conputer chose ${nonPlayerChoice}. ${playerChoice} beats ${nonPlayerChoice}. Round Won.`;
+    } else if (win == 2) {
+        result = `You chose ${playerChoice}, Conputer chose ${nonPlayerChoice}. Stalemate.`;
     } else {
-        console.log("lose");
-        console.log(num);
+        result = `You chose ${playerChoice}, Conputer chose ${nonPlayerChoice}. ${nonPlayerChoice} beats ${playerChoice}. Round lost.`;
     }
-    return;
+    return result;
 }
 
 /**
