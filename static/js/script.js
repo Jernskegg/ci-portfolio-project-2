@@ -122,7 +122,17 @@ function scissors() {
 }
 
 function lizard() {
-
+    let nonPlayerChoice = numgen();
+    let playerChoice = "Lizard";
+    let result = "";
+    if (nonPlayerChoice == "Paper" || nonPlayerChoice == "Spock") {
+        result = msg(playerChoice, nonPlayerChoice, win = 1);
+    } else if (nonPlayerChoice == playerChoice) {
+        result = msg(playerChoice, nonPlayerChoice, win = 2);
+    } else {
+        result = msg(playerChoice, nonPlayerChoice, win = 0);
+    }
+    return;
 }
 
 function spock() {
