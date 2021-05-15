@@ -33,11 +33,15 @@ function numgen() {
 // win game
 
 function win() {
+    let oldwinscore = parseInt(document.getElementById(`wins`).innerText);
+    document.getElementById("wins").innerText = ++oldwinscore;
 
 }
 
 // lose game
 function lose() {
+    let oldlossscore = parseInt(document.getElementById(`losses`).innerText);
+    document.getElementById("losses").innerText = ++oldlossscore;
 
 }
 
@@ -74,21 +78,17 @@ function game() {
     btnSpock.addEventListener("click", function () {
         result = spock();
     })
-
-    console.log(result)
-
 }
 
 function rock() {
     let nonPlayerChoice = numgen();
     let playerChoice = "Rock";
-    let result = "";
     if (nonPlayerChoice == "Lizard" || nonPlayerChoice == "Scissors") {
-        result = msg(playerChoice, nonPlayerChoice, win = 1);
+        result = msg(playerChoice, nonPlayerChoice, state = 1);
     } else if (nonPlayerChoice == playerChoice) {
-        result = msg(playerChoice, nonPlayerChoice, win = 2);
+        result = msg(playerChoice, nonPlayerChoice, state = 2);
     } else {
-        result = msg(playerChoice, nonPlayerChoice, win = 0);
+        result = msg(playerChoice, nonPlayerChoice, state = 0);
     }
     return result;
 }
@@ -96,13 +96,12 @@ function rock() {
 function paper() {
     let nonPlayerChoice = numgen();
     let playerChoice = "paper";
-    let result = "";
     if (nonPlayerChoice == "Rock" || nonPlayerChoice == "Spock") {
-        result = msg(playerChoice, nonPlayerChoice, win = 1);
+        result = msg(playerChoice, nonPlayerChoice, state = 1);
     } else if (nonPlayerChoice == playerChoice) {
-        result = msg(playerChoice, nonPlayerChoice, win = 2);
+        result = msg(playerChoice, nonPlayerChoice, state = 2);
     } else {
-        result = msg(playerChoice, nonPlayerChoice, win = 0);
+        result = msg(playerChoice, nonPlayerChoice, state = 0);
     }
     return;
 }
@@ -110,13 +109,12 @@ function paper() {
 function scissors() {
     let nonPlayerChoice = numgen();
     let playerChoice = "Scissors";
-    let result = "";
     if (nonPlayerChoice == "Lizard" || nonPlayerChoice == "Paper") {
-        result = msg(playerChoice, nonPlayerChoice, win = 1);
+        result = msg(playerChoice, nonPlayerChoice, state = 1);
     } else if (nonPlayerChoice == playerChoice) {
-        result = msg(playerChoice, nonPlayerChoice, win = 2);
+        result = msg(playerChoice, nonPlayerChoice, state = 2);
     } else {
-        result = msg(playerChoice, nonPlayerChoice, win = 0);
+        result = msg(playerChoice, nonPlayerChoice, state = 0);
     }
     return;
 }
@@ -124,31 +122,43 @@ function scissors() {
 function lizard() {
     let nonPlayerChoice = numgen();
     let playerChoice = "Lizard";
-    let result = "";
     if (nonPlayerChoice == "Paper" || nonPlayerChoice == "Spock") {
-        result = msg(playerChoice, nonPlayerChoice, win = 1);
+        result = msg(playerChoice, nonPlayerChoice, state = 1);
     } else if (nonPlayerChoice == playerChoice) {
-        result = msg(playerChoice, nonPlayerChoice, win = 2);
+        result = msg(playerChoice, nonPlayerChoice, state = 2);
     } else {
-        result = msg(playerChoice, nonPlayerChoice, win = 0);
+        result = msg(playerChoice, nonPlayerChoice, state = 0);
     }
     return;
 }
 
 function spock() {
-
+    let nonPlayerChoice = numgen();
+    let playerChoice = "Spock";
+    if (nonPlayerChoice == "Rock" || nonPlayerChoice == "Scissors") {
+        result = msg(playerChoice, nonPlayerChoice, state = 1);
+    } else if (nonPlayerChoice == playerChoice) {
+        result = msg(playerChoice, nonPlayerChoice, state = 2);
+    } else {
+        result = msg(playerChoice, nonPlayerChoice, state = 0);
+    }
+    return;
 }
-
-function msg(playerChoice, nonPlayerChoice, win) {
+/**
+ * function / message generator from the results made in the button functions
+ * 
+ */
+function msg(playerChoice, nonPlayerChoice, state) {
     let resultOne = "";
     let resultTwo = "";
     let resultThree = "";
-    if (win == 1) {
+    if (state == 1) {
         resultOne = `You chose ${playerChoice}, Computer chose ${nonPlayerChoice}.`;
         resultTwo = `${playerChoice} beats ${nonPlayerChoice}.`;
         resultThree = `Round Won.`;
         document.getElementById("textThree").style.color = "green";
-    } else if (win == 2) {
+        win();
+    } else if (state == 2) {
         resultOne = `You chose ${playerChoice}, Computer chose ${nonPlayerChoice}.`;
         resultTwo = "";
         resultThree = `Stalemate.`;
@@ -158,13 +168,11 @@ function msg(playerChoice, nonPlayerChoice, win) {
         resultTwo = ` ${nonPlayerChoice} beats ${playerChoice}.`;
         resultThree = `Round lost.`;
         document.getElementById("textThree").style.color = "red";
+        lose();
     }
 
-    let resultTextOne = document.getElementById(`textOne`).innerText;
     document.getElementById("textOne").textContent = resultOne;
-    let resultTextTwo = document.getElementById(`textTwo`).innerText;
     document.getElementById("textTwo").textContent = resultTwo;
-    let resultTextThree = document.getElementById(`textThree`).innerText;
     document.getElementById("textThree").textContent = resultThree;
     return;
 }
