@@ -39,9 +39,19 @@ function win() {
         document.getElementById("how").style.display = "none";
         document.getElementById("win").style.display = "block";
         document.getElementById("lose").style.display = "none";
+        reset();
     } else {
         document.getElementById("wins").innerText = ++oldwinscore;
     }
+
+    let playAgain = document.getElementById("playAgain")
+    playAgain.addEventListener("click", function () {
+        document.getElementById("game").style.display = "block";
+        document.getElementById("how").style.display = "none";
+        document.getElementById("win").style.display = "none";
+        document.getElementById("lose").style.display = "none";
+        return;
+    })
 }
 
 // lose game
@@ -52,9 +62,18 @@ function lose() {
         document.getElementById("how").style.display = "none";
         document.getElementById("win").style.display = "none";
         document.getElementById("lose").style.display = "block";
+        reset();
     } else {
         document.getElementById("losses").innerText = ++oldLossScore;
     }
+    let retry = document.getElementById("retry")
+    retry.addEventListener("click", function () {
+        document.getElementById("game").style.display = "block";
+        document.getElementById("how").style.display = "none";
+        document.getElementById("win").style.display = "none";
+        document.getElementById("lose").style.display = "none";
+        return;
+    })
 }
 
 /**
@@ -161,9 +180,6 @@ function spock() {
  * 
  */
 function msg(playerChoice, nonPlayerChoice, state) {
-    let resultOne = "";
-    let resultTwo = "";
-    let resultThree = "";
     if (state == 1) {
         resultOne = `You chose ${playerChoice}, Computer chose ${nonPlayerChoice}.`;
         resultTwo = `${playerChoice} beats ${nonPlayerChoice}.`;
@@ -207,4 +223,12 @@ function howToPlay() {
         document.getElementById("lose").style.display = "none";
         return;
     })
+}
+
+function reset() {
+    let oldLossScore = parseInt(document.getElementById(`losses`).innerText);
+    let oldwinscore = parseInt(document.getElementById(`wins`).innerText);
+    document.getElementById("losses").innerText = 0;
+    document.getElementById("wins").innerText = 0;
+
 }

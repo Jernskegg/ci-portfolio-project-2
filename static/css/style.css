@@ -23,58 +23,44 @@
     height: 70vh;
 }
 
+.gamesquare button {
+    margin: 0 auto;
+    font-size: 25px;
+    width: 500px;
+    padding: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.gamesquare button:hover {
+    border: 2px solid white;
+    background: gray;
+    color: white;
+}
+
+
 /* win message */
 .win {
     display: none;
-
+    margin: auto 0;
 }
 
 .win h3 {
     font-size: 3vw;
     text-align: center;
-    margin: 10% 0;
-}
-
-.win button {
-    margin: 0 25%;
-    font-size: 25px;
-    width: 50%;
-    padding: 25px;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-.win button:hover {
-    border: 2px solid white;
-    background: gray;
-    color: white;
 }
 
 /* Lose message */
 .lose {
     display: none;
+    margin: auto 0;
 }
 
 .lose h3 {
     font-size: 3vw;
     text-align: center;
-    margin: 10% 0;
 }
 
-.lose button {
-    margin: 0 25%;
-    font-size: 25px;
-    width: 50%;
-    padding: 25px;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-.lose button:hover {
-    border: 2px solid white;
-    background: gray;
-    color: white;
-}
 
 /* how to play message*/
 .how {
@@ -155,14 +141,15 @@
 
 .game-btn:hover {
     background: black;
-    color: white; 
-    border:5px solid white;
+    color: white;
+    border: 5px solid white;
 }
+
 .game-text {
     margin-top: 15px;
     text-align: center;
     font-size: 2.5vw;
-    
+
 }
 
 /* Javascript error */
