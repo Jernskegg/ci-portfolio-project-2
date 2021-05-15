@@ -46,9 +46,15 @@ function win() {
 
 // lose game
 function lose() {
-    let oldlossscore = parseInt(document.getElementById(`losses`).innerText);
-    document.getElementById("losses").innerText = ++oldlossscore;
-
+    let oldLossScore = parseInt(document.getElementById(`losses`).innerText);
+    if (oldLossScore >= 2) {
+        document.getElementById("game").style.display = "none";
+        document.getElementById("how").style.display = "none";
+        document.getElementById("win").style.display = "none";
+        document.getElementById("lose").style.display = "block";
+    } else {
+        document.getElementById("losses").innerText = ++oldLossScore;
+    }
 }
 
 /**
