@@ -15,6 +15,7 @@
 .gamesquare {
     display: flex;
     justify-content: center;
+    text-align: center;
     margin: 15px 10%;
     background-color: lightgrey;
     border: 1px solid black;
@@ -159,4 +160,16 @@
 .support h3 {
     text-align: center;
     margin: 50% 0;
+}
+
+/*Responsive design*/
+
+/*For screen widths 800px and below */
+@media screen and (max-width: 800px) {
+    .game-btn{
+        width: 15vw;
+        height: 15vw;
+        margin: 0 8px;
+        font-size: 50px;
+    }
 }
