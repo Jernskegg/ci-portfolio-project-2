@@ -34,8 +34,14 @@ function numgen() {
 
 function win() {
     let oldwinscore = parseInt(document.getElementById(`wins`).innerText);
-    document.getElementById("wins").innerText = ++oldwinscore;
-
+    if (oldwinscore >= 2) {
+        document.getElementById("game").style.display = "none";
+        document.getElementById("how").style.display = "none";
+        document.getElementById("win").style.display = "block";
+        document.getElementById("lose").style.display = "none";
+    } else {
+        document.getElementById("wins").innerText = ++oldwinscore;
+    }
 }
 
 // lose game
@@ -183,12 +189,16 @@ function msg(playerChoice, nonPlayerChoice, state) {
 function howToPlay() {
     document.getElementById("game").style.display = "none";
     document.getElementById("how").style.display = "block";
+    document.getElementById("win").style.display = "none";
+    document.getElementById("lose").style.display = "none";
 
     let iUnderstand = document.getElementById("understand")
 
     iUnderstand.addEventListener("click", function () {
         document.getElementById("game").style.display = "block";
         document.getElementById("how").style.display = "none";
+        document.getElementById("win").style.display = "none";
+        document.getElementById("lose").style.display = "none";
         return;
     })
 }
