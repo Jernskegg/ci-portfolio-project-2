@@ -38,7 +38,6 @@
     color: white;
 }
 
-
 /* win message */
 .win {
     display: none;
@@ -46,7 +45,7 @@
 }
 
 .win h3 {
-    font-size: 3vw;
+    font-size: 8vw;
     text-align: center;
 }
 
@@ -57,10 +56,9 @@
 }
 
 .lose h3 {
-    font-size: 3vw;
+    font-size: 8vw;
     text-align: center;
 }
-
 
 /* how to play message*/
 .how {
