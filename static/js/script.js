@@ -1,8 +1,8 @@
 //hide javascript error if javascript is running
-document.getElementById("support").style.display = "none";
+
 
 document.addEventListener("DOMContentLoaded", function () {
-
+    document.getElementById("support").style.display = "none";
     let howtp = document.getElementById("htp");
 
 
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
 
-
+    initialize();
     game();
 })
 /**
@@ -23,11 +23,15 @@ document.addEventListener("DOMContentLoaded", function () {
  * 4. lizard
  * 5. spock
  */
-function numgen() {
+function nonPlayerChoiceGenerator() {
     let num = Math.floor(Math.random() * 5);
     let choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
     let choice = choices[num]
     return choice;
+}
+
+function initialize() {
+
 }
 
 // win game
@@ -79,6 +83,8 @@ function lose() {
 /**
  * runs the game area and sets the game ID to display:block and the rest to Display:none
  */
+
+
 function game() {
     document.getElementById("game").style.display = "block";
     document.getElementById("how").style.display = "none";
@@ -89,97 +95,45 @@ function game() {
     let btnLizard = document.getElementById("lizard");
     let btnSpock = document.getElementById("spock");
     let result = "";
+
     btnRock.addEventListener("click", function () {
-        result = rock();
-        return result;
+        roundGame("Rock", "lizard", "Scissors");
     })
 
     btnPaper.addEventListener("click", function () {
-        result = paper();
+        roundGame("Paper", "Rock", "Spock");
     })
 
     btnScissors.addEventListener("click", function () {
-        result = scissors();
+        roundGame("Scissors", "Lizard", "Paper");
     })
 
     btnLizard.addEventListener("click", function () {
-        result = lizard();
+        roundGame("Lizard", "Paper", "Spock");
     })
 
     btnSpock.addEventListener("click", function () {
-        result = spock();
+        roundGame("Spock", "Paper", "Scissors");
     })
 }
 
-function rock() {
-    let nonPlayerChoice = numgen();
-    let playerChoice = "Rock";
-    if (nonPlayerChoice == "Lizard" || nonPlayerChoice == "Scissors") {
-        result = msg(playerChoice, nonPlayerChoice, state = 1);
+function roundGame(playerChoice, conflictOne, conflictTwo) {
+    let nonPlayerChoice = nonPlayerChoiceGenerator();
+    if (nonPlayerChoice == conflictOne || nonPlayerChoice == conflictTwo) {
+        result = RoundMessage(playerChoice, nonPlayerChoice, state = 1);
     } else if (nonPlayerChoice == playerChoice) {
-        result = msg(playerChoice, nonPlayerChoice, state = 2);
+        result = RoundMessage(playerChoice, nonPlayerChoice, state = 2);
     } else {
-        result = msg(playerChoice, nonPlayerChoice, state = 0);
-    }
-    return result;
-}
-
-function paper() {
-    let nonPlayerChoice = numgen();
-    let playerChoice = "paper";
-    if (nonPlayerChoice == "Rock" || nonPlayerChoice == "Spock") {
-        result = msg(playerChoice, nonPlayerChoice, state = 1);
-    } else if (nonPlayerChoice == playerChoice) {
-        result = msg(playerChoice, nonPlayerChoice, state = 2);
-    } else {
-        result = msg(playerChoice, nonPlayerChoice, state = 0);
+        result = RoundMessage(playerChoice, nonPlayerChoice, state = 0);
     }
     return;
 }
 
-function scissors() {
-    let nonPlayerChoice = numgen();
-    let playerChoice = "Scissors";
-    if (nonPlayerChoice == "Lizard" || nonPlayerChoice == "Paper") {
-        result = msg(playerChoice, nonPlayerChoice, state = 1);
-    } else if (nonPlayerChoice == playerChoice) {
-        result = msg(playerChoice, nonPlayerChoice, state = 2);
-    } else {
-        result = msg(playerChoice, nonPlayerChoice, state = 0);
-    }
-    return;
-}
-
-function lizard() {
-    let nonPlayerChoice = numgen();
-    let playerChoice = "Lizard";
-    if (nonPlayerChoice == "Paper" || nonPlayerChoice == "Spock") {
-        result = msg(playerChoice, nonPlayerChoice, state = 1);
-    } else if (nonPlayerChoice == playerChoice) {
-        result = msg(playerChoice, nonPlayerChoice, state = 2);
-    } else {
-        result = msg(playerChoice, nonPlayerChoice, state = 0);
-    }
-    return;
-}
-
-function spock() {
-    let nonPlayerChoice = numgen();
-    let playerChoice = "Spock";
-    if (nonPlayerChoice == "Rock" || nonPlayerChoice == "Scissors") {
-        result = msg(playerChoice, nonPlayerChoice, state = 1);
-    } else if (nonPlayerChoice == playerChoice) {
-        result = msg(playerChoice, nonPlayerChoice, state = 2);
-    } else {
-        result = msg(playerChoice, nonPlayerChoice, state = 0);
-    }
-    return;
-}
 /**
  * function / message generator from the results made in the button functions
  * 
  */
-function msg(playerChoice, nonPlayerChoice, state) {
+function RoundMessage(playerChoice, nonPlayerChoice, state) {
     if (state == 1) {
         resultOne = `You chose ${playerChoice}, Computer chose ${nonPlayerChoice}.`;
         resultTwo = `${playerChoice} beats ${nonPlayerChoice}.`;

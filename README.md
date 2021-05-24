@@ -14,21 +14,21 @@ this webpage is for you to be able to play a small game on your free time or on 
 
 as user I want to see how I play this game.
 
-as a user I want to win this game.
+as a user I want to win this game. :---
 
-as a user I want to play this game on a mobile device during my coffee break.
+as a user I want to play this game on a mobile device during my coffee break. :----
 
 # Features
 
-   ## rezisable logo
+   * rezisable logo
 
       the logo scales with the game window size.
 
-   ## game area
+   * game area
 
       the game area will show the game area and will also contain the how to play/ win and lose message.
 
-   ## how to play button
+   * how to play button
       the page will have a button that converts the game area into how to play area.
 
 # Future Features
@@ -70,14 +70,14 @@ as a user I want to play this game on a mobile device during my coffee break.
 # Deployment
    ## via gitpod
  
-   To use gitpod you have to start a repository on Github. 
+   * To use gitpod you have to start a repository on Github. 
    from there if you have the gitpod plugin on your browser a green button stating "Gitpod" is available. that button redirects you to the GitPod IDE
    
-   When it's done loading you will see down in the bottom a few tabs, when you press on terminal you will be able to input a command 
+   * When it's done loading you will see down in the bottom a few tabs, when you press on terminal you will be able to input a command 
    
-   to deploy your application through a http server you can write "Python3 -m http.server". this will open the http service and GitPod will give you a notification "A service is available on port 8000" with three buttons ( make public, open preview, open browser) so when you open your browser it will open the  index.html files, if that doesn't exist it will open the readme.md file instead.
+   * to deploy your application through a http server you can write "Python3 -m http.server". this will open the http service and GitPod will give you a notification "A service is available on port 8000" with three buttons ( make public, open preview, open browser) so when you open your browser it will open the  index.html files, if that doesn't exist it will open the readme.md file instead.
  
-   This is a good place to test your applications before pushing and deploying on github.
+   * This is a good place to test your applications before pushing and deploying on github.
 
  
    ## via github pages
