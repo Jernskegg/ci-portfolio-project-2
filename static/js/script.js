@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //hides javascript error if javascript is running
     document.getElementById("support").style.display = "none";
     game();
-})
+});
 
 /**
  * Generates random number between 1-5 and retuns it as a string from an array to compare if it's a win or lose.
@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function nonPlayerChoiceGenerator() {
     let num = Math.floor(Math.random() * 5);
-    let choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
-    let choice = choices[num]
+    let choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
+    let choice = choices[num];
     return choice;
 }
 
@@ -25,7 +25,7 @@ function nonPlayerChoiceGenerator() {
 function win() {
     let oldwinscore = parseInt(document.getElementById(`wins`).innerText);
     if (oldwinscore >= 2) {
-        switchDisplay("none", "none", "block", "none")
+        switchDisplay("none", "none", "block", "none");
         resetScore();
     } else {
         document.getElementById("wins").innerText = ++oldwinscore;
@@ -36,7 +36,7 @@ function win() {
 function lose() {
     let oldLossScore = parseInt(document.getElementById(`losses`).innerText);
     if (oldLossScore >= 2) {
-        switchDisplay("none", "none", "none", "block")
+        switchDisplay("none", "none", "none", "block");
         resetScore();
     } else {
         document.getElementById("losses").innerText = ++oldLossScore;
@@ -46,7 +46,7 @@ function lose() {
  * Initializes the game and adds eventlisteners to the game.
  */
 function game() {
-    switchDisplay("block", "none", "none", "none")
+    switchDisplay("block", "none", "none", "none");
 
     let btnRock = document.getElementById("rock");
     let btnPaper = document.getElementById("paper");
@@ -54,45 +54,45 @@ function game() {
     let btnLizard = document.getElementById("lizard");
     let btnSpock = document.getElementById("spock");
     let howtp = document.getElementById("htp");
-    let iUnderstand = document.getElementById("understand")
-    let playAgain = document.getElementById("playAgain")
-    let retryGame = document.getElementById("retry")
+    let iUnderstand = document.getElementById("understand");
+    let playAgain = document.getElementById("playAgain");
+    let retryGame = document.getElementById("retry");
     //Game Buttons
     btnRock.addEventListener("click", function () {
         roundGame("Rock", "lizard", "Scissors");
-    })
+    });
 
     btnPaper.addEventListener("click", function () {
         roundGame("Paper", "Rock", "Spock");
-    })
+    });
 
     btnScissors.addEventListener("click", function () {
         roundGame("Scissors", "Lizard", "Paper");
-    })
+    });
 
     btnLizard.addEventListener("click", function () {
         roundGame("Lizard", "Paper", "Spock");
-    })
+    });
 
     btnSpock.addEventListener("click", function () {
         roundGame("Spock", "Paper", "Scissors");
-    })
+    });
     //Win lose and how to play buttons
     howtp.addEventListener("click", function () {
-        switchDisplay("none", "block", "none", "none")
-    })
+        switchDisplay("none", "block", "none", "none");
+    });
 
     iUnderstand.addEventListener("click", function () {
-        switchDisplay("block", "none", "none", "none")
-    })
+        switchDisplay("block", "none", "none", "none");
+    });
 
     playAgain.addEventListener("click", function () {
-        switchDisplay("block", "none", "none", "none")
-    })
+        switchDisplay("block", "none", "none", "none");
+    });
 
     retryGame.addEventListener("click", function () {
-        switchDisplay("block", "none", "none", "none")
-    })
+        switchDisplay("block", "none", "none", "none");
+    });
 }
 /**
  *  inputs 3 values for comparison.
@@ -102,6 +102,8 @@ function game() {
  */
 function roundGame(playerChoice, winningChoiceOne, winningChoiceTwo) {
     let nonPlayerChoice = nonPlayerChoiceGenerator();
+    let result;
+    let state;
     if (nonPlayerChoice == winningChoiceOne || nonPlayerChoice == winningChoiceTwo) {
         result = RoundMessage(playerChoice, nonPlayerChoice, state = 1);
     } else if (nonPlayerChoice == playerChoice) {
@@ -118,6 +120,9 @@ function roundGame(playerChoice, winningChoiceOne, winningChoiceTwo) {
  * @param
  */
 function RoundMessage(playerChoice, nonPlayerChoice, state) {
+    let resultOne;
+    let resultTwo;
+    let resultThree;
     if (state == 1) {
         resultOne = `You chose ${playerChoice}, Computer chose ${nonPlayerChoice}.`;
         resultTwo = `${playerChoice} beats ${nonPlayerChoice}.`;
@@ -144,8 +149,6 @@ function RoundMessage(playerChoice, nonPlayerChoice, state) {
 }
 
 function resetScore() {
-    let oldLossScore = parseInt(document.getElementById(`losses`).innerText);
-    let oldwinscore = parseInt(document.getElementById(`wins`).innerText);
     document.getElementById("losses").innerText = 0;
     document.getElementById("wins").innerText = 0;
 }
