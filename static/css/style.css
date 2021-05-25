@@ -91,7 +91,6 @@
 }
 
 .how button {
-    margin: 0 25%;
     font-size: 25px;
     width: 50%;
     padding: 25px;
@@ -166,10 +165,59 @@
 
 /*For screen widths 800px and below */
 @media screen and (max-width: 800px) {
-    .game-btn{
+    .game-btn {
         width: 15vw;
         height: 15vw;
         margin: 0 8px;
         font-size: 50px;
     }
+
+
+    .how li {
+        font-size: 150%;
+    }
+
+    .how i {
+        font-size: 100%;
+    }
+}
+
+/*For screen widths 550px and below */
+@media screen and (max-width: 550px) {
+    .logo{
+        font-size: 6vw;
+    }
+
+    .gamesquare {
+        height: vh;
+    }
+    
+    .game-btn {
+        width: 20vw;
+        height: 20vw;
+        margin: 5px 8px;
+        font-size: 50px;
+    }
+
+    .how p {
+        font-size: 5vw;
+    }
+
+    .how ul{
+        margin: 5px;
+    }
+
+    .how li {
+        font-size: 5vw;
+    }
+
+    .how button {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .lose button, .win button{
+        width: 100%;
+    }
+
 }
