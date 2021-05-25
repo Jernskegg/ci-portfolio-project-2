@@ -1,12 +1,12 @@
-//hide javascript error if javascript is running
 document.addEventListener("DOMContentLoaded", function () {
+    //hides javascript error if javascript is running
     document.getElementById("support").style.display = "none";
-    initialize();
     game();
 })
 
 /**
  * Generates random number between 1-5 and retuns it as a string from an array to compare if it's a win or lose.
+ * @returns {"random choice"}
  * 1. rock
  * 2. paper
  * 3. scissors
@@ -21,32 +21,11 @@ function nonPlayerChoiceGenerator() {
     return choice;
 }
 
-function initialize() {
-    let howtp = document.getElementById("htp");
-    howtp.addEventListener("click", function () {
-        switchDisplay("none", "block", "none", "none")
-    })
-    let iUnderstand = document.getElementById("understand")
-    iUnderstand.addEventListener("click", function () {
-        switchDisplay("block", "none", "none", "none")
-    })
-    let playAgain = document.getElementById("playAgain")
-    playAgain.addEventListener("click", function () {
-        switchDisplay("block", "none", "none", "none")
-        return;
-    })
-    let retryGame = document.getElementById("retry")
-    retryGame.addEventListener("click", function () {
-        switchDisplay("block", "none", "none", "none")
-        return;
-    })
-
-}
 // win game
 function win() {
     let oldwinscore = parseInt(document.getElementById(`wins`).innerText);
     if (oldwinscore >= 2) {
-        switchDisplay("none","none","block","none")
+        switchDisplay("none", "none", "block", "none")
         resetScore();
     } else {
         document.getElementById("wins").innerText = ++oldwinscore;
@@ -64,17 +43,21 @@ function lose() {
     }
 }
 /**
- * runs the game area and sets the game ID to display:block and the rest to Display:none
+ * Initializes the game and adds eventlisteners to the game.
  */
 function game() {
-    switchDisplay("block","none","none","none")
+    switchDisplay("block", "none", "none", "none")
 
     let btnRock = document.getElementById("rock");
     let btnPaper = document.getElementById("paper");
     let btnScissors = document.getElementById("scissors");
     let btnLizard = document.getElementById("lizard");
     let btnSpock = document.getElementById("spock");
-
+    let howtp = document.getElementById("htp");
+    let iUnderstand = document.getElementById("understand")
+    let playAgain = document.getElementById("playAgain")
+    let retryGame = document.getElementById("retry")
+    //Game Buttons
     btnRock.addEventListener("click", function () {
         roundGame("Rock", "lizard", "Scissors");
     })
@@ -93,6 +76,22 @@ function game() {
 
     btnSpock.addEventListener("click", function () {
         roundGame("Spock", "Paper", "Scissors");
+    })
+    //Win lose and how to play buttons
+    howtp.addEventListener("click", function () {
+        switchDisplay("none", "block", "none", "none")
+    })
+
+    iUnderstand.addEventListener("click", function () {
+        switchDisplay("block", "none", "none", "none")
+    })
+
+    playAgain.addEventListener("click", function () {
+        switchDisplay("block", "none", "none", "none")
+    })
+
+    retryGame.addEventListener("click", function () {
+        switchDisplay("block", "none", "none", "none")
     })
 }
 /**
@@ -113,8 +112,10 @@ function roundGame(playerChoice, winningChoiceOne, winningChoiceTwo) {
     return;
 }
 /**
- * function / message generator from the results made in the button functions
- * 
+ * this function updates the HTML to present the outcome of the round to the user
+ * @param {"Players input"}
+ * @param {"computers input"}
+ * @param
  */
 function RoundMessage(playerChoice, nonPlayerChoice, state) {
     if (state == 1) {
@@ -149,8 +150,9 @@ function resetScore() {
     document.getElementById("wins").innerText = 0;
 }
 /**
- * This changes the display mode on
- * @param {string} block or none "displayGame" to "block" or "none" 
+ * This changes the display mode on style.display from the input
+ * 
+ * @param {string} displayGame
  * @param {string} displayHowToPlay 
  * @param {string} displayWinScreen 
  * @param {string} displayLoseScreen 
