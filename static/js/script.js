@@ -53,7 +53,7 @@ function game() {
     let btnScissors = document.getElementById("scissors");
     let btnLizard = document.getElementById("lizard");
     let btnSpock = document.getElementById("spock");
-    let howtp = document.getElementById("htp");
+    let btnHowToPlay = document.getElementById("howToPlay");
     let iUnderstand = document.getElementById("understand");
     let playAgain = document.getElementById("playAgain");
     let retryGame = document.getElementById("retry");
@@ -78,7 +78,7 @@ function game() {
         roundGame("Spock", "Paper", "Scissors");
     });
     //Win lose and how to play buttons
-    howtp.addEventListener("click", function () {
+    btnHowToPlay.addEventListener("click", function () {
         switchDisplay("none", "block", "none", "none");
     });
 
@@ -163,7 +163,7 @@ function resetScore() {
 
 function switchDisplay(displayGame, displayHowToPlay, displayWinScreen, displayLoseScreen) {
     document.getElementById("game").style.display = displayGame;
-    document.getElementById("how").style.display = displayHowToPlay;
+    document.getElementById("howSection").style.display = displayHowToPlay;
     document.getElementById("win").style.display = displayWinScreen;
     document.getElementById("lose").style.display = displayLoseScreen;
 }

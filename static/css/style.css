@@ -39,9 +39,12 @@
     color: white;
 }
 
+.score p {
+    display: inline-block;
+}
+
 /* win message */
 .win {
-    display: none;
     margin: auto 0;
 }
 
@@ -52,7 +55,6 @@
 
 /* Lose message */
 .lose {
-    display: none;
     margin: auto 0;
 }
 
@@ -61,36 +63,33 @@
     text-align: center;
 }
 
-/* how to play message*/
-.how {
-    display: none;
-}
+/* how-section to play message*/
 
-.how h3 {
+.how-section h3 {
     font-size: 200%;
     text-align: center;
 }
 
-.how p {
+.how-section p {
     text-align: center;
     font-size: 200%;
 }
 
-.how ul {
+.how-section ul {
     text-align: center;
     list-style: none;
     margin: 50px;
 }
 
-.how li {
+.how-section li {
     font-size: 200%;
 }
 
-.how i {
+.how-section i {
     font-size: 150%;
 }
 
-.how button {
+.how-section button {
     font-size: 25px;
     width: 50%;
     padding: 25px;
@@ -98,13 +97,13 @@
     border-radius: 5px;
 }
 
-.how button:hover {
+.how-section button:hover {
     border: 2px solid white;
     background: gray;
     color: white;
 }
 
-.htp button {
+.how-to-play button {
     margin: 0 25%;
     font-size: 25px;
     width: 50%;
@@ -113,7 +112,7 @@
     border-radius: 5px;
 }
 
-.htp button:hover {
+.how-to-play button:hover {
     border: 2px solid white;
     background: gray;
     color: white;
@@ -121,7 +120,6 @@
 
 /* game */
 .game {
-    display: none;
     align-items: center;
     margin: auto;
 }
@@ -150,17 +148,6 @@
 
 }
 
-/* Javascript error */
-
-.support {
-    display: block;
-}
-
-.support h3 {
-    text-align: center;
-    margin: 50% 0;
-}
-
 /*Responsive design*/
 
 /*For screen widths 800px and below */
@@ -173,11 +160,11 @@
     }
 
 
-    .how li {
+    .how-section li {
         font-size: 150%;
     }
 
-    .how i {
+    .how-section i {
         font-size: 100%;
     }
 }
@@ -189,7 +176,7 @@
     }
 
     .gamesquare {
-        height: vh;
+        margin: 5px 10%;
     }
     
     .game-btn {
@@ -199,25 +186,59 @@
         font-size: 50px;
     }
 
-    .how p {
+    .how-section p {
         font-size: 5vw;
     }
 
-    .how ul{
+    .how-section ul{
         margin: 5px;
     }
 
-    .how li {
+    .how-section li {
         font-size: 5vw;
     }
 
-    .how button {
+    .how-section button {
         width: 90%;
+        padding: 15px;
         font-size: 14px;
     }
 
     .lose button, .win button{
         width: 100%;
     }
-
+    
+    .how-to-play button{
+        font-size: 15px;
+        height: 50px;
+        padding: 0;
+    }
 }
+/* these areas are hidden so that javascript can switch these*/
+.game {
+    display: none;
+}
+
+.how-section {
+    display: none;
+}
+
+.lose {
+    display: none;
+}
+
+.win {
+    display: none;
+}
+
+
+/* Javascript error message */
+.support {
+    display: block;
+}
+
+.support h3 {
+    text-align: center;
+    margin: 50% 0;
+}
+
