@@ -46,9 +46,6 @@
 /* win message */
 .win {
     margin: auto 0;
-}
-
-.win h3 {
     font-size: 8vw;
     text-align: center;
 }
@@ -56,9 +53,6 @@
 /* Lose message */
 .lose {
     margin: auto 0;
-}
-
-.lose h3 {
     font-size: 8vw;
     text-align: center;
 }

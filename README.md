@@ -48,6 +48,8 @@ as a user I want to play this game on a mobile device during my coffee break. :-
    Html was used to put structure to the web-page.
 ## css
    CSS is used to put color and form to the html files
+## Javascript 
+   JavaScript was used to automate and update the page according to the users input.
 ## Gitpod
    Gitpod is the IDE that i've used to write the underlying code for the webpage.
    Why I chose this for ease of use and its connectability with github and due to it being used during the Code Institute's walkthrough project.
@@ -61,7 +63,8 @@ as a user I want to play this game on a mobile device during my coffee break. :-
 
    ## code validation
    
-   Code was validated using W3 html and JigSaw css validator without warning or errors.
+   Code was validated using W3 for html, JigSaw for css and Jshint for javaScript without warning or errors.
+   
 
    ## test cases (user story based with screenshots)
 
