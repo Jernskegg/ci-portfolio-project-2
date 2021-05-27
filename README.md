@@ -12,11 +12,9 @@ this webpage is for you to be able to play a small game on your free time or on 
 
 # User Stories
 
-as user I want to see how I play this game.
+as a user I want to play a game of chances.
 
-as a user I want to win this game. :---
-
-as a user I want to play this game on a mobile device during my coffee break. :----
+as a user I -
 
 # Features
 
@@ -40,9 +38,9 @@ as a user I want to play this game on a mobile device during my coffee break. :-
 # Wireframes
 
    ## Desktop sized wireframes
-
+   [Desktop Wireframe](./docs/wireframes/dekstop-wireframe.jpg)
    ## Handheld sized wireframes
-
+   [Phone Wireframe](./docs/wireframes/phone-wireframe.jpg)
 # Technology
 ## html
    Html was used to put structure to the web-page.
@@ -63,9 +61,8 @@ as a user I want to play this game on a mobile device during my coffee break. :-
 
    ## code validation
    
-   Code was validated using W3 for html, JigSaw for css and Jshint for javaScript without warning or errors.
+   Code was validated using W3 for html, JigSaw for css and Jshint for javaScript and has been formated to not show any warning or errors.
    
-
    ## test cases (user story based with screenshots)
 
 ## fixed bugs and issues found.
@@ -93,6 +90,6 @@ as a user I want to play this game on a mobile device during my coffee break. :-
  
    When you have waited a few minutes you can click on the link provided and now you can test if everything works as intended. if not you have to update your files and push it again. Github pages will update the page for you and again, this might take a few minutes.
 
-# credits
+# My personal achievements and what I feel I need to work on.
 
-# My personal achievements and what I feel I need to work on. 
+   My biggest achievment was learning how to refactor reusable code and reduces the code.
