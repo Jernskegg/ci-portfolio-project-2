@@ -29,6 +29,9 @@ as a user I -
    * how to play button
       the page will have a button that converts the game area into how to play area.
 
+   * Javascript running feedback
+      the page starts of with a message which tells the use javascript is not running.
+      
 # Future Features
 
 # Typography and Color Scheme
@@ -93,3 +96,5 @@ as a user I -
 # My personal achievements and what I feel I need to work on.
 
    My biggest achievment was learning how to refactor reusable code and reduces the code.
+
+   

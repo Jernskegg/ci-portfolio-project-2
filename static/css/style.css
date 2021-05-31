@@ -5,10 +5,20 @@
     border: none;
 }
 
-/* logo */
+/*Custom background made only with css*/
+body {
+    height: 100vh;
+    background: radial-gradient(black, 70%, transparent), linear-gradient(61deg, rgba(0, 0, 0, 1) 0%, rgba(70, 70, 70, 1) 10%, rgba(126, 126, 126, 1) 22%, rgba(79, 79, 79, 1) 22%, rgba(97, 97, 97, 1) 31%, rgba(103, 103, 103, 1) 31%, rgba(123, 123, 123, 1) 52%, rgba(129, 129, 129, 1) 52%, rgba(156, 156, 156, 1) 65%, rgba(133, 133, 133, 1) 80%, rgba(49, 49, 49, 1) 80%, rgba(134, 134, 134, 1) 100%);
+}
+
+/* logo with viewWidth(vw), using this it will take 1% of the viewport distance.*/
+/* the logo in this instance will always be the size of 5% of the viewport width unless you have a breakpoint */
 .logo {
     text-align: center;
     font-size: 5vw;
+    background: rgba(255, 255, 255, 0.75);
+    margin: 0 10%;
+    border-radius: 15px;
 }
 
 /* game */
@@ -17,7 +27,7 @@
     justify-content: center;
     text-align: center;
     margin: 15px 10%;
-    background-color: lightgrey;
+    background-color: rgba(255, 255, 255, 0.75);
     border: 1px solid black;
     border-radius: 15px;
     padding: 25px;
@@ -165,14 +175,14 @@
 
 /*For screen widths 550px and below */
 @media screen and (max-width: 550px) {
-    .logo{
+    .logo {
         font-size: 6vw;
     }
 
     .gamesquare {
         margin: 5px 10%;
     }
-    
+
     .game-btn {
         width: 20vw;
         height: 20vw;
@@ -184,7 +194,7 @@
         font-size: 5vw;
     }
 
-    .how-section ul{
+    .how-section ul {
         margin: 5px;
     }
 
@@ -198,16 +208,20 @@
         font-size: 14px;
     }
 
-    .lose button, .win button{
+    .lose button,
+    .win button {
         width: 100%;
     }
-    
-    .how-to-play button{
+
+    .how-to-play button {
         font-size: 15px;
         height: 50px;
         padding: 0;
     }
 }
+
+/*Javascript modifiers*/
+
 /* these areas are hidden so that javascript can switch these*/
 .game {
     display: none;
@@ -227,6 +241,7 @@
 
 
 /* Javascript error message */
+/* If javascript is not running it won't hide this message and therefor the user can tell that its javascript that's either blocked or not allowed on this page.*/
 .support {
     display: block;
 }
@@ -235,4 +250,3 @@
     text-align: center;
     margin: 50% 0;
 }
-
