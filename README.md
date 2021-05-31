@@ -77,6 +77,8 @@ as a user I want to play a game of chances.
 
 ## fixed bugs and issues found.
 
+   During develompent I found and fixed a bug where javascript would stack eventlisteners of the user game moves when pressing How to play button, this was due to that I had the return button calling the game functions. I fixed this by moving all event listeners to the game function that only is called once the DOM was loaded.
+
 # Deployment
    ## via gitpod
  
