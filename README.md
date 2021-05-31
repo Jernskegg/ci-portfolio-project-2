@@ -25,12 +25,18 @@ as a user I want to play a game of chances.
       the game area will show the game area and will also contain the how to play/ win and lose message.
 
    * how to play button
+
       the page will have a button that converts the game area into how to play area.
 
    * Javascript running feedback
+
       the page starts of with a message which tells the use javascript is not running.
 
 # Future Features
+   
+   * Animations
+
+      When the user presses one of the options i'd like to have an animation where the users button and the computers choice would crash into eachother and the winning choice would remain on the page to increase the visual feedback of what happens during the round.
 
 # Typography and Color Scheme
 
