@@ -14,8 +14,6 @@ this webpage is for you to be able to play a small game on your free time or on 
 
 as a user I want to play a game of chances.
 
-as a user I -
-
 # Features
 
    * rezisable logo
@@ -31,7 +29,7 @@ as a user I -
 
    * Javascript running feedback
       the page starts of with a message which tells the use javascript is not running.
-      
+
 # Future Features
 
 # Typography and Color Scheme
@@ -67,6 +65,15 @@ as a user I -
    Code was validated using W3 for html, JigSaw for css and Jshint for javaScript and has been formated to not show any warning or errors.
    
    ## test cases (user story based with screenshots)
+   [Screenshot from  main page with steps](./docs/screenshots/Screenshot-1.png)
+
+   As a user I can press one of the presented options and input my choice and see if the option wins the round. I can tell by the message presented on the page, and its also green, red or blue for visual feedback.
+
+   And I can also keep track of the score by looking at the score tracking below the round message or i can press the "How to play?" button.
+
+   [Screenshot from how to play page with steps](./docs/screenshots/Screenshot-2.png)
+
+   As a user I can see what the rules are and what options beats the opponent choice.
 
 ## fixed bugs and issues found.
 
