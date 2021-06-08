@@ -26,7 +26,6 @@ function win() {
     let oldwinscore = parseInt(document.getElementById(`wins`).innerText);
     if (oldwinscore >= 2) {
         switchDisplay("none", "none", "block", "none");
-        resetScore();
     } else {
         document.getElementById("wins").innerText = ++oldwinscore;
     }
@@ -37,7 +36,6 @@ function lose() {
     let oldLossScore = parseInt(document.getElementById(`losses`).innerText);
     if (oldLossScore >= 2) {
         switchDisplay("none", "none", "none", "block");
-        resetScore();
     } else {
         document.getElementById("losses").innerText = ++oldLossScore;
     }
@@ -88,10 +86,12 @@ function game() {
 
     playAgain.addEventListener("click", function () {
         switchDisplay("block", "none", "none", "none");
+        resetScore();
     });
 
     retryGame.addEventListener("click", function () {
         switchDisplay("block", "none", "none", "none");
+        resetScore();
     });
 }
 /**
@@ -145,12 +145,14 @@ function RoundMessage(playerChoice, nonPlayerChoice, state) {
     document.getElementById("textOne").textContent = resultOne;
     document.getElementById("textTwo").textContent = resultTwo;
     document.getElementById("textThree").textContent = resultThree;
-    return;
 }
 
 function resetScore() {
     document.getElementById("losses").innerText = 0;
     document.getElementById("wins").innerText = 0;
+    document.getElementById("textOne").textContent = "Pick your move!";
+    document.getElementById("textTwo").textContent = "";
+    document.getElementById("textThree").textContent = "";
 }
 /**
  * This changes the display mode on style.display from the input
