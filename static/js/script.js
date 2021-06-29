@@ -21,7 +21,9 @@ function nonPlayerChoiceGenerator() {
     return choice;
 }
 
-// win game
+/**
+ * this function changes and shows a win message
+ */
 function win() {
     let oldwinscore = parseInt(document.getElementById(`wins`).innerText);
     if (oldwinscore >= 2) {
@@ -31,7 +33,9 @@ function win() {
     }
 }
 
-// lose game
+/**
+ * this function changes and shows a lose message
+ */
 function lose() {
     let oldLossScore = parseInt(document.getElementById(`losses`).innerText);
     if (oldLossScore >= 2) {
@@ -147,6 +151,9 @@ function RoundMessage(playerChoice, nonPlayerChoice, state) {
     document.getElementById("textThree").textContent = resultThree;
 }
 
+/**
+ * This function resets the score of the game after it is being called
+ */
 function resetScore() {
     document.getElementById("losses").innerText = 0;
     document.getElementById("wins").innerText = 0;
@@ -154,6 +161,7 @@ function resetScore() {
     document.getElementById("textTwo").textContent = "";
     document.getElementById("textThree").textContent = "";
 }
+
 /**
  * This changes the display mode on style.display from the input
  * 
@@ -162,7 +170,6 @@ function resetScore() {
  * @param {string} displayWinScreen 
  * @param {string} displayLoseScreen 
  */
-
 function switchDisplay(displayGame, displayHowToPlay, displayWinScreen, displayLoseScreen) {
     document.getElementById("game").style.display = displayGame;
     document.getElementById("howSection").style.display = displayHowToPlay;
