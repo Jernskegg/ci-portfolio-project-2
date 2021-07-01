@@ -80,7 +80,9 @@ As a user, I want to see how to play the game.
 
    * as a user, I want to play a game of chances.
 
-      [Screenshot from  main page with steps](./docs/screenshots/Screenshot-1.png) 
+      [Screenshot from main page with steps - Desktop](./docs/screenshots/screenshot-1.png) 
+      |
+      [Screenshot from main page with steps - Handheld device](./docs/screenshots/screenshot-1-phone.png)  
 
       When I open the game, I could choose between five options. I can then press one of the options, and then around message appeared saying what my choice was and what the computer picked and telling me what the outcome was.
 
@@ -89,7 +91,9 @@ As a user, I want to see how to play the game.
 
    * as a user, I want to see how to play the game.
   
-      [Screenshot from how to play page with steps](./docs/screenshots/Screenshot-2.png)
+      [Screenshot from how to play page with steps - Desktop](./docs/screenshots/screenshot-2.png)
+      |
+      [Screenshot from how to play page with steps - Handheld device](./docs/screenshots/screenshot-2-phone.png)
 
       When I open the page, I can see the button "How to play", when I press on it, it shows me the rules and player options, then I can press "I understand now!" and then I am returned to the game and ready to play.
    
