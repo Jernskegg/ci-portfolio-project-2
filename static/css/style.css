@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@500&display=swap');
 /*Remove standard browser margin and paddings*/
 * {
     padding: 0;
@@ -5,8 +6,13 @@
     border: none;
 }
 
+p {
+    font-family: 'Lato', sans-serif;
+}
 
-
+h2 {
+    font-family: 'Oswald', sans-serif;
+}
 /* logo with viewWidth(vw), using this it will take 1% of the viewport distance.*/
 /* the logo in this instance will always be the size of 5% of the viewport width unless you have a breakpoint */
 .logo {
@@ -145,6 +151,27 @@
     font-size: 2.5vw;
     height: 50px;
 
+}
+
+/* button colours */
+.btn-blue {
+    color: blue;
+}
+
+.btn-cyan {
+    color: cyan;
+}
+
+.btn-green{
+    color: green;
+}
+
+.btn-lime{
+    color: lime;
+}
+
+.btn-yellow{
+    color: yellow;
 }
 
 /*Custom background made only with css*/
