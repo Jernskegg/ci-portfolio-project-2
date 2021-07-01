@@ -124,9 +124,13 @@ as a user I want to see how to play the game.
 
    Microsoft Edge works as intended.
 
-## fixed bugs and issues found.
+## fixed bugs and issues found during development
 
-   During develompent I found and fixed a bug where javascript would stack eventlisteners of the user game moves when pressing How to play button, this was due to that I had the return button calling the game functions. I fixed this by moving all event listeners to the game function that only is called once the DOM was loaded.
+   * During develompent I found and fixed a bug where javascript would stack eventlisteners of the user game moves when pressing How to play button, this was due to that I had the return button calling the game functions. I fixed this by moving all event listeners to the game function that only is called once the DOM was loaded.
+
+   * The "how to play" button didn't work as I wanted and made several revisions of it before settling on just have it at the bottom of the content instead being fixed to the bottom of the screen.
+
+   * I wanted to use the defer command on the script but as it is a fairly new feature, I thought it might be better to wait with using this feature to make sure it would work across all plattforms.
 
 # Deployment
    ## via gitpod
