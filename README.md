@@ -79,15 +79,21 @@ as a user I want to see how to play the game.
    Code was validated using W3 for html, JigSaw for css and Jshint for javaScript and has been formated to not show any warning or errors.
    
    ## test cases (user story based with screenshots)
-   [Screenshot from  main page with steps](./docs/screenshots/Screenshot-1.png)
 
-   As a user I can press one of the presented options and input my choice and see if the option wins the round. I can tell by the message presented on the page, and its also green, red or blue for visual feedback.
+   * as a user I want to play a game of chances.
 
-   And I can also keep track of the score by looking at the score tracking below the round message or i can press the "How to play?" button.
+      [Screenshot from  main page with steps](./docs/screenshots/Screenshot-1.png) 
 
-   [Screenshot from how to play page with steps](./docs/screenshots/Screenshot-2.png)
+      when I open the game I am presented with 5 options, I can then press one of the options and then a round message appeared saying what my choice was and what the computer picked and telling me what the outcome was.
 
-   As a user I can see what the rules are and what options beats the opponent choice.
+      after I win three rounds a message is displayed and saying I won or lost.
+
+
+   * as a user I want to see how to play the game.
+  
+      [Screenshot from how to play page with steps](./docs/screenshots/Screenshot-2.png)
+
+      when I open the page I can see the button "How to play", when I press on it, it shows me the rules and player options then I can press "I understand now!" and then I am returned to the game and ready to play.
 
 ## fixed bugs and issues found.
 
