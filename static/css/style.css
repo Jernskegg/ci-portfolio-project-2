@@ -156,22 +156,27 @@ h2 {
 /* button colours */
 .btn-blue {
     color: blue;
+    border-color: blue;
 }
 
 .btn-cyan {
     color: cyan;
+    border-color: cyan;
 }
 
 .btn-green{
     color: green;
+    border-color: green;
 }
 
 .btn-lime{
     color: lime;
+    border-color: lime;
 }
 
 .btn-yellow{
     color: yellow;
+    border-color: yellow;
 }
 
 /*Custom background made only with css*/
