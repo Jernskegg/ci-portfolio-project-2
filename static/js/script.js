@@ -5,41 +5,33 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /**
- * Generates random number between 1-5 and retuns it as a string from an array to compare if it's a win or lose.
- * @returns {"random choice"}
- * 1. rock
- * 2. paper
- * 3. scissors
- * 4. lizard
- * 5. spock
+ * Generates random number between 1-5 and picks an option out of the array by using the number as the index.
+ * @returns {string} returns a value for the choices array ("Rock", "Paper", "Scissors", "Lizard", "Spock")
  */
-
 function nonPlayerChoiceGenerator() {
-    let num = Math.floor(Math.random() * 5);
     let choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
-    let choice = choices[num];
-    return choice;
+    return choices[Math.floor(Math.random() * 5)];
 }
 
 /**
- * this function changes and shows a win message
+ * compares and checks if it should show a win message
  */
 function win() {
     let oldwinscore = parseInt(document.getElementById(`wins`).innerText);
     if (oldwinscore >= 2) {
-        switchDisplay("none", "none", "block", "none");
+        switchDisplay("win");
     } else {
         document.getElementById("wins").innerText = ++oldwinscore;
     }
 }
 
 /**
- * this function changes and shows a lose message
+ * compares and checks if it should show a win message
  */
 function lose() {
     let oldLossScore = parseInt(document.getElementById(`losses`).innerText);
     if (oldLossScore >= 2) {
-        switchDisplay("none", "none", "none", "block");
+        switchDisplay("lose");
     } else {
         document.getElementById("losses").innerText = ++oldLossScore;
     }
@@ -48,7 +40,7 @@ function lose() {
  * Initializes the game and adds eventlisteners to the game.
  */
 function game() {
-    switchDisplay("block", "none", "none", "none");
+    switchDisplay("game");
 
     let btnRock = document.getElementById("rock");
     let btnPaper = document.getElementById("paper");
@@ -81,53 +73,50 @@ function game() {
     });
     //Win lose and how to play buttons
     btnHowToPlay.addEventListener("click", function () {
-        switchDisplay("none", "block", "none", "none");
+        switchDisplay("howSection");
     });
 
     iUnderstand.addEventListener("click", function () {
-        switchDisplay("block", "none", "none", "none");
+        switchDisplay("game");
     });
 
     playAgain.addEventListener("click", function () {
-        switchDisplay("block", "none", "none", "none");
+        switchDisplay("game");
         resetScore();
     });
 
     retryGame.addEventListener("click", function () {
-        switchDisplay("block", "none", "none", "none");
+        switchDisplay("game");
         resetScore();
     });
 }
 /**
- *  inputs 3 values for comparison.
- * @param {string} playerChoice, text
- * @param {string} winningChoiceOne, 
- * @param {string} winningChoiceTwo, 
+ * inputs user choice with oposing values for comparison.
+ * @param {string} playerChoice - Player choice
+ * @param {string} winningChoiceOne - oposing that should make comparison send a loss
+ * @param {string} winningChoiceTwo - oposing that should make comparison send a loss
  */
 function roundGame(playerChoice, winningChoiceOne, winningChoiceTwo) {
     let nonPlayerChoice = nonPlayerChoiceGenerator();
-    let result;
-    let state;
-    if (nonPlayerChoice == winningChoiceOne || nonPlayerChoice == winningChoiceTwo) {
-        result = RoundMessage(playerChoice, nonPlayerChoice, state = 1);
-    } else if (nonPlayerChoice == playerChoice) {
-        result = RoundMessage(playerChoice, nonPlayerChoice, state = 2);
+    if (nonPlayerChoice === winningChoiceOne || nonPlayerChoice === winningChoiceTwo) {
+        result = RoundMessage(playerChoice, nonPlayerChoice,1);
+    } else if (nonPlayerChoice === playerChoice) {
+        result = RoundMessage(playerChoice, nonPlayerChoice,2);
     } else {
-        result = RoundMessage(playerChoice, nonPlayerChoice, state = 0);
+        result = RoundMessage(playerChoice, nonPlayerChoice,0);
     }
-    return;
 }
 /**
- * this function updates the HTML to present the outcome of the round to the user
- * @param {"Players input"}
- * @param {"computers input"}
- * @param
+ * updates the HTML to present the outcome message of the round to the user
+ * @param {string} playerChoice - inputs of the players choice
+ * @param {string} nonPlayerChoice - input of the computers choice
+ * @param {number} state - input for the state of the game (1 = win, 2 = draw and else it would give the lose message)
  */
 function RoundMessage(playerChoice, nonPlayerChoice, state) {
     let resultOne;
     let resultTwo;
     let resultThree;
-    if (state == 1) {
+    if (state === 1) {
         resultOne = `You chose ${playerChoice}, Computer chose ${nonPlayerChoice}.`;
         resultTwo = `${playerChoice} beats ${nonPlayerChoice}.`;
         resultThree = `Round Won.`;
@@ -163,16 +152,14 @@ function resetScore() {
 }
 
 /**
- * This changes the display mode on style.display from the input
+ * Changes which style.display block should be shown from the input
  * 
- * @param {string} displayGame
- * @param {string} displayHowToPlay 
- * @param {string} displayWinScreen 
- * @param {string} displayLoseScreen 
+ * @param {string} displayBlock id ("game","howsection","win","lose")
  */
-function switchDisplay(displayGame, displayHowToPlay, displayWinScreen, displayLoseScreen) {
-    document.getElementById("game").style.display = displayGame;
-    document.getElementById("howSection").style.display = displayHowToPlay;
-    document.getElementById("win").style.display = displayWinScreen;
-    document.getElementById("lose").style.display = displayLoseScreen;
+function switchDisplay(displayBlock) {
+    document.getElementById("game").style.display = "none";
+    document.getElementById("howSection").style.display = "none";
+    document.getElementById("win").style.display = "none";
+    document.getElementById("lose").style.display = "none";
+    document.getElementById(displayBlock).style.display = "block";
 }
