@@ -8,11 +8,13 @@ Full-Stack Development course (5p) | Portfolio project 2
 # Purpose of the Project
 
 The purpose of this project is to make Rock paper Scissors Lizard Spock in javascript.
-this webpage is for you to be able to play a small game on your free time or on your coffee break during work. something that is small and bite sizes and doesn't take ages to complete.
+this webpage is for you to be able to play a small game on your free time or on your coffee break during work. something that is small and bite sizes and doesn't take an to complete.
 
 # User Stories
 
 as a user I want to play a game of chances.
+
+as a user I want to see how to play the game.
 
 # Features
 
@@ -28,6 +30,10 @@ as a user I want to play a game of chances.
 
       the page will have a button that converts the game area into how to play area.
 
+   * Round message
+
+      It shows the result of each round with coloured message.
+
    * Javascript running feedback
 
       the page starts of with a message which tells the use javascript is not running.
@@ -40,7 +46,9 @@ as a user I want to play a game of chances.
 
 # Typography and Color Scheme
 
-   For the colour scheme I am going with a white background, light-gray play area and the buttons in the different colour so the buttons will contrast well to the rest of the page so the user will have it easier to spot the buttons even if user has some vision impairment.
+   For the colour scheme I am going with a grayscaled background, light-gray play area and the buttons in the different colour so the buttons will contrast well to the rest of the page so the user will have it easier to spot the buttons even if user has some vision impairment.
+
+   I want to use Oswald for the logo, And lato for the rest of the text due to it simplicity and clearness.
 
 # Wireframes
 
