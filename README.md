@@ -94,6 +94,35 @@ as a user I want to see how to play the game.
       [Screenshot from how to play page with steps](./docs/screenshots/Screenshot-2.png)
 
       when I open the page I can see the button "How to play", when I press on it, it shows me the rules and player options then I can press "I understand now!" and then I am returned to the game and ready to play.
+   
+   ## supported screens and browsers
+   The page is designed to have a maximum of 1920x1080 screen support.
+
+   desktop 1920x1080 to 1920x290. works as intended.
+
+   The following devices have been tested on chrome developer tool emulator and worked as intended.
+   * Galaxy Note II
+   * Kindle Fire HDX
+   * Pixel 2
+   * iPhone 5/SE
+   * iPhone 6/7/8 Plus
+   * iPhone X
+   * iPad pro
+   * Surface Duo
+   * Galaxy Fold
+
+   Small issues that affects the webpapage
+   * iphone 4 (the height of the screen resolution hides half of the how to play button.)
+
+   The following devices have been tested on Firefox developer tool emulator and worked as intended.
+   * galaxy S9
+   * iPad
+   * iPhone 6/7/8 Plus iOS 11
+   * iPhone 6/7/8 iOS 11
+   * iPhone X/XS iOS 12
+   * Kindle Fire HDX Linux
+
+   Microsoft Edge works as intended.
 
 ## fixed bugs and issues found.
 
