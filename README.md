@@ -7,48 +7,48 @@ Full-Stack Development course (5p) | Portfolio project 2
 
 # Purpose of the Project
 
-The purpose of this project is to make Rock paper Scissors Lizard Spock in javascript.
-this webpage is for you to be able to play a small game on your free time or on your coffee break during work. something that is small and bite sizes and doesn't take an to complete.
+The purpose of this project is to make Rock Paper Scissors Lizard Spock in javascript. This webpage is for you to play a small game in your free time or during your coffee break during work. Something small and bite sizes and doesn't take a to complete.
 
 # User Stories
 
-as a user I want to play a game of chances.
+as a user, I want to play a game of chances.
 
-as a user I want to see how to play the game.
+As a user, I want to see how to play the game.
 
 # Features
 
-   * rezisable logo
+   * resizeable logo
 
-      the logo scales with the game window size.
+      The logo scales with the game window size.
 
    * game area
 
-      the game area will show the game area and will also contain the how to play/ win and lose message.
+      The game area will show buttons and contain how to play/ win and lose a message.
 
    * how to play button
 
-      the page will have a button that converts the game area into how to play area.
+      The page will have a button that converts the game area into how to play page.
 
    * Round message
 
-      It shows the result of each round with coloured message.
+      It shows the result of each round with a coloured message.
 
    * Javascript running feedback
 
-      the page starts of with a message which tells the use javascript is not running.
+      The page will give the user a message which tells javascript is not running.
 
 # Future Features
    
    * Animations
 
-      When the user presses one of the options i'd like to have an animation where the users button and the computers choice would crash into eachother and the winning choice would remain on the page to increase the visual feedback of what happens during the round.
+      When the user presses one option, I’d like to have an animation where the users’ button and the computer’s choice would crash into each other. The winning choice would remain on the page to increase the visual feedback of what happens during the round.
 
 # Typography and Color Scheme
 
-   For the colour scheme I am going with a grayscaled background, light-gray play area and the buttons in the different colour so the buttons will contrast well to the rest of the page so the user will have it easier to spot the buttons even if user has some vision impairment.
+   For the colour scheme, I am going with a grayscaled background, light-grey play area. The buttons will be in different colours to contrast nicely to the rest of the page, making it easier to spot the buttons even if they have vision impairment.
 
-   I want to use Oswald for the logo, And lato for the rest of the text due to it simplicity and clearness.
+
+   I want to use Oswald for the logo And Lato for the text due to its simplicity and clearness.
 
 # Wireframes
 
@@ -57,21 +57,19 @@ as a user I want to see how to play the game.
    ## Handheld sized wireframes
    [Phone Wireframe](./docs/wireframes/phone-wireframe.jpg)
 # Technology
-## html
-   Html was used to put structure to the web-page.
-## css
-   CSS is used to put color and form to the html files
-## Javascript 
-   JavaScript was used to automate and update the page according to the users input.
+## HTML
+   Html is used to put structure to the web page.
+## CSS
+   CSS is used to put colour and form to the HTML files.
+## JavaScript 
+   You can use JavaScript to automate and update the page according to the user’s input.
 ## Gitpod
-   Gitpod is the IDE that i've used to write the underlying code for the webpage.
-   Why I chose this for ease of use and its connectability with github and due to it being used during the Code Institute's walkthrough project.
+   Gitpod is the IDE that I’ve used to write the underlying code for the webpage. I chose this for ease of use and its connectivity with GitHub, and due to that, I used it during the Code Institute's walkthrough project.
 ## AwesomeFont
-   Awesome font is a script that allows developer to use special characters on the web-page. there is a wide range of variety and it as simple copy and pasting the link provided on their webpage.
+   The awesome font is a script that allows developers to use special characters on the web page. There is a wide range of variety, and it is simple to copy and paste the link provided on their webpage.
 
 ## GoogleFonts
-   GooleFonts is a cloud font service where the fonts are stored on Googles cloud service which grants the developer a wider range of fonts to use on the web-page and not having to rely on the user to have the font installed.
-
+   GooleFonts is a cloud font service. The fonts are stored on Google’s cloud service, which grants the developer a more comprehensive range of fonts to use on the web page without relying on the user to have the font installed.
 # testing
 
    ## code validation
@@ -80,27 +78,27 @@ as a user I want to see how to play the game.
    
    ## test cases (user story based with screenshots)
 
-   * as a user I want to play a game of chances.
+   * as a user, I want to play a game of chances.
 
       [Screenshot from  main page with steps](./docs/screenshots/Screenshot-1.png) 
 
-      when I open the game I am presented with 5 options, I can then press one of the options and then a round message appeared saying what my choice was and what the computer picked and telling me what the outcome was.
-
-      after I win three rounds a message is displayed and saying I won or lost.
+      When I open the game, I could choose between five options. I can then press one of the options, and then around message appeared saying what my choice was and what the computer picked and telling me what the outcome was.
 
 
-   * as a user I want to see how to play the game.
+      After I win three rounds, a message is displayed and saying I won or lost.
+
+   * as a user, I want to see how to play the game.
   
       [Screenshot from how to play page with steps](./docs/screenshots/Screenshot-2.png)
 
-      when I open the page I can see the button "How to play", when I press on it, it shows me the rules and player options then I can press "I understand now!" and then I am returned to the game and ready to play.
+      When I open the page, I can see the button "How to play", when I press on it, it shows me the rules and player options, then I can press "I understand now!" and then I am returned to the game and ready to play.
    
    ## supported screens and browsers
    The page is designed to have a maximum of 1920x1080 screen support.
 
    desktop 1920x1080 to 1920x290. works as intended.
 
-   The following devices have been tested on chrome developer tool emulator and worked as intended.
+   The following devices have been tested on the chrome developer tool emulator and worked as intended.
    * Galaxy Note II
    * Kindle Fire HDX
    * Pixel 2
@@ -111,10 +109,10 @@ as a user I want to see how to play the game.
    * Surface Duo
    * Galaxy Fold
 
-   Small issues that affects the webpapage
-   * iphone 4 (the height of the screen resolution hides half of the how to play button.)
+   Minor issues that affect the webpage
+   * iPhone 4 (the height of the screen resolution hides half of the how to play button.)
 
-   The following devices have been tested on Firefox developer tool emulator and worked as intended.
+   The following devices have been tested on the Firefox developer tool emulator and worked as intended.
    * galaxy S9
    * iPad
    * iPhone 6/7/8 Plus iOS 11
@@ -126,37 +124,42 @@ as a user I want to see how to play the game.
 
 ## fixed bugs and issues found during development
 
-   * During develompent I found and fixed a bug where javascript would stack eventlisteners of the user game moves when pressing How to play button, this was due to that I had the return button calling the game functions. I fixed this by moving all event listeners to the game function that only is called once the DOM was loaded.
+   * I found and fixed a bug during development where javascript would stack “event-listeners” in the game function when pressing the How to play button. 
 
-   * The "how to play" button didn't work as I wanted and made several revisions of it before settling on just have it at the bottom of the content instead being fixed to the bottom of the screen.
+      That happened because I had the “event-listener” on the how-to-play function, and I called the game function from the how-to-play function. I fixed this by having all the “event-listener” in the game function. When the button was pressed during the how to play function, it just switched what content to display.
 
-   * I wanted to use the defer command on the script but as it is a fairly new feature, I thought it might be better to wait with using this feature to make sure it would work across all plattforms.
+
+   * The "how to play" button didn't work as I wanted visaully. So I made several revisions before settling on just having it attached to the bottom of the content instead of being fixed to the bottom of the screen.
+
+   * I wanted to use the defer command on the script, but as it is a relatively new feature, I thought it might be better to wait to use it to make sure it would work across all platforms.
 
 # Deployment
-   ## via gitpod
+   ## via Gitpod
  
-   * To use gitpod you have to start a repository on Github. 
-   from there if you have the gitpod plugin on your browser a green button stating "Gitpod" is available. that button redirects you to the GitPod IDE
+   * To use Gitpod, you have to start a repository on Github. from there, if you have the Gitpod plugin on your browser, a green button stating "Gitpod" is available. that button redirects you to the GitPod IDE
    
-   * When it's done loading you will see down in the bottom a few tabs, when you press on terminal you will be able to input a command 
+   * When it's done loading, you will see down in the bottom a few tabs. When you press on the terminal, you will input a command
    
-   * to deploy your application through a http server you can write "Python3 -m http.server". this will open the http service and GitPod will give you a notification "A service is available on port 8000" with three buttons ( make public, open preview, open browser) so when you open your browser it will open the  index.html files, if that doesn't exist it will open the readme.md file instead.
+   * To deploy your application through an HTTP server. You can write "Python3 -m http.server". This will open the HTTP service. GitPod will give you a notification "A service is available on port "8000" with three buttons ( make public, open preview, open browser) so when you open your browser. It will open the index.html files. If that doesn't exist, it will open the readme file instead.
+
  
-   * This is a good place to test your applications before pushing and deploying on github.
+   * This is an excellent place to test your applications before pushing and deploying on GitHub.
 
  
    ## via github pages
  
-   To deploy a web page in github pages you need to go to your repository on github. there you will see a settings tab. Once you click that you will have a list on the left. scroll down to "pages and click it.
- 
-   there you will see a drop down menu and there you have to choose your branch of the project you want to deploy then you have to press save.
- 
-   Once saved you'll receive a notification on the same page with the link to your newly deployed site, although note that github pages can take a few minutes before it's fully deployed.
- 
-   When you have waited a few minutes you can click on the link provided and now you can test if everything works as intended. if not you have to update your files and push it again. Github pages will update the page for you and again, this might take a few minutes.
+   * To deploy a web page in GitHub pages, you need to go to your repository on GitHub. There you will see a settings tab. Once you click that, you will have a list on the left. Scroll down to "pages and click it.
+
+   * There you will see a drop-down menu, and there you have to choose your branch of the project you want to deploy, then you have to press save.
+
+   * Once saved, you'll receive a notification on the same page with the link to your newly deployed site, although note that GitHub pages can take a few minutes before it's fully deployed.
+
+   * When you have waited a few minutes, you can click on the link provided, and now you can test if everything works as intended. If not, you have to update your files and push them again. Github pages will update the page for you, and again, this might take a few minutes.
 
 # My personal achievements and what I feel I need to work on.
 
-   My biggest achievment was learning how to refactor reusable code and reduces the code.
+   My most significant achievement was learning how to refactor reusable code and reduces the code.
+
+   And I still need to work on the git commit message and the amounts, I need to find a convention to follow.
 
    
